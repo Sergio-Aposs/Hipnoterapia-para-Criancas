@@ -8,10 +8,16 @@
 
 .imagem-ilustrativa img {
   max-width: 25%;
-  height: auto;
+  height: 25%;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   animation: fadeInUp 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .imagem-ilustrativa img {
+    max-width: 60%;
+  }
 }
 
 
