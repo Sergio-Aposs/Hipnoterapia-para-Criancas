@@ -7,11 +7,13 @@
 }
 
 .imagem-ilustrativa img {
-  max-width: 25%;
-  height: 25%;
+  width: 25%;            /* define o tamanho fixo como 1/4 da largura total */
+  max-width: 300px;      /* evita que cresça demais em telas grandes */
+  height: auto;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   animation: fadeInUp 1s ease-in-out;
+  display: inline-block;
 }
 
 @media (max-width: 768px) {
@@ -19,5 +21,6 @@
     max-width: 60%;
   }
 }
+
 
 
