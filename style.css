@@ -1,55 +1,29 @@
-<!-- Link do CSS -->
-
-<link rel="stylesheet" href="css/style.css">
-.imagem-ilustrativa {
-  text-align: center;
-  margin: 40px 0;
-}
-
-/* --- BLOCO ILUSTRATIVO ENTRE SEÇÕES --- */
-.imagem-ilustrativa {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 40px 0;
-}
-
+/* ---------- IMAGENS ILUSTRATIVAS RESPONSIVAS ---------- */
 .imagem-container {
-  display: inline-block;
+  width: 100%;
+  max-width: 600px; /* Limite máximo para desktop */
+  margin: 30px auto; /* centraliza a imagem */
   text-align: center;
 }
 
-.imagem-ilustrativa img {
-  width: 20%;              /* força o tamanho para 1/5 da largura da tela */
-  max-width: 250px;        /* limita o tamanho máximo em telas grandes */
-  min-width: 180px;        /* evita que fique minúscula demais */
-  height: auto;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  animation: fadeInUp 1s ease-in-out;
-  transition: transform 0.3s ease;
+.imagem-container img {
+  width: 100%;
+  height: auto; /* mantém proporção da imagem */
+  display: block;
+  border-radius: 15px; /* opcional: deixa cantos arredondados */
 }
 
-.imagem-ilustrativa img:hover {
-  transform: scale(1.05);
-}
-
-/* --- Ajuste para telas menores (celulares e tablets) --- */
-@media (max-width: 1024px) {
-  .imagem-ilustrativa img {
-    width: 35%;
-  }
-}
-
+/* Ajustes para telas menores */
 @media (max-width: 768px) {
-  .imagem-ilustrativa img {
-    width: 55%;
+  .imagem-container {
+    max-width: 90%; /* ocupa mais espaço no mobile */
   }
 }
 
 @media (max-width: 480px) {
-  .imagem-ilustrativa img {
-    width: 70%;
+  .imagem-container {
+    max-width: 100%; /* ocupa toda a largura do mobile */
   }
 }
+
 
