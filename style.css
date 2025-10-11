@@ -1,27 +1,201 @@
 /* ---------- IMAGENS ILUSTRATIVAS RESPONSIVAS ---------- */
-.imagem-container {
-  width: 100%;
-  max-width: 600px; /* Limite máximo para desktop */
-  margin: 30px auto; /* centraliza a imagem */
+:root {
+  --cor-primaria: #6b5edb;
+  --cor-secundaria: #b39ddb;
+  --cor-fundo: #f7f9ff;
+  --cor-texto: #333;
+  --cor-botao: #6b5edb;
+  --cor-botao-hover: #5a4fcf;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  color: #fff;
   text-align: center;
+  padding: 70px 20px;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+header h2 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #2e3192;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.2);
+}
+
+section {
+  max-width: 900px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 50px 35px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 1s ease;
+}
+
+h2 {
+  color: var(--cor-primaria);
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+p, li {
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+ul {
+  padding-left: 25px;
+}
+
+.cta {
+  display: inline-block;
+  text-align: center;
+  background: var(--cor-botao);
+  color: white;
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 12px rgba(107, 94, 219, 0.3);
+}
+
+.cta:hover {
+  background: var(--cor-botao-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(107, 94, 219, 0.4);
+}
+
+.bonus {
+  background: #f2edff;
+  border-left: 6px solid var(--cor-primaria);
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 25px;
+}
+
+.faq {
+  background: #f9f9fb;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.price {
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--cor-texto);
+  font-weight: 600;
+  margin: 30px 0;
+}
+
+.price span {
+  color: var(--cor-primaria);
+  font-size: 2.2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* ---------- IMAGEM ILUSTRATIVA RESPONSIVA ---------- */
+.imagem-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  max-width: 600px; /* tamanho máximo no desktop */
 }
 
 .imagem-container img {
   width: 100%;
-  height: auto; /* mantém proporção da imagem */
-  display: block;
-  border-radius: 15px; /* opcional: deixa cantos arredondados */
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Ajustes para telas menores */
+/* ---------- ANIMAÇÕES ---------- */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
 @media (max-width: 768px) {
+  header {
+    padding: 50px 15px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    margin: 30px 15px;
+    padding: 30px 20px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .cta {
+    font-size: 1rem;
+    padding: 14px 22px;
+  }
+
+  .price span {
+    font-size: 1.8rem;
+  }
+
   .imagem-container {
-    max-width: 90%; /* ocupa mais espaço no mobile */
+    max-width: 90%; /* reduz a imagem no tablet */
+    margin: 30px auto;
   }
 }
 
 @media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header h2 {
+    font-size: 1rem;
+  }
+
   .imagem-container {
-    max-width: 100%; /* ocupa toda a largura do mobile */
+    max-width: 100%; /* ocupa toda largura no mobile */
+    margin: 20px auto;
   }
 }
