@@ -201,37 +201,35 @@ footer {
 }
 
 /* Selo de Garantia */
-.selo-garantia {
-  text-align: center;
-  margin: 25px auto 0;
-  font-size: 1rem;
-  color: #fff;
-  background: var(--cor-primaria);
-  display: inline-block;
-  padding: 12px 25px;
-  border-radius: 12px;
-  box-shadow: 0 5px 12px rgba(107, 94, 219, 0.3);
-  font-weight: 600;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.selo-garantia-imagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
 }
 
-.selo-garantia:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(107, 94, 219, 0.4);
+.w-32 {
+  width: 160px; /* tamanho ideal para desktop */
+  height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.w-32:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .selo-garantia {
-    font-size: 0.9rem;
-    padding: 10px 20px;
+  .w-32 {
+    width: 120px; /* reduz suavemente no tablet */
   }
 }
 
 @media (max-width: 480px) {
-  .selo-garantia {
-    font-size: 0.85rem;
-    padding: 8px 15px;
+  .w-32 {
+    width: 100px; /* tamanho perfeito no celular */
   }
 }
+
 
