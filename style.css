@@ -230,3 +230,28 @@ footer {
   font-weight: 600;
   margin-top: 10px;
   line-height: 1.5;
+  
+/* Mockup */
+  .imagem-ilustrativa {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.imagem-container {
+  display: inline-block;
+}
+
+.ebook-mockup {
+  width: 40%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ebook-mockup:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
