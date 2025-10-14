@@ -130,7 +130,7 @@ footer {
   justify-content: center;
   align-items: center;
   margin: 40px auto;
-  max-width: 600px; /* tamanho máximo no desktop */
+  max-width: 300px; /* tamanho máximo no desktop */
 }
 
 .imagem-container img {
@@ -180,7 +180,7 @@ footer {
   }
 
   .imagem-container {
-    max-width: 90%; /* reduz a imagem no tablet */
+    max-width: 60%; /* reduz a imagem no tablet */
     margin: 30px auto;
   }
 }
@@ -195,7 +195,7 @@ footer {
   }
 
   .imagem-container {
-    max-width: 100%; /* ocupa toda largura no mobile */
+    max-width: 80%; /* ocupa toda largura no mobile */
     margin: 20px auto;
   }
 }
@@ -243,7 +243,7 @@ footer {
 
 .ebook-mockup {
   width: 40%;
-  max-width: 350px;
+  max-width: 200px;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
@@ -251,7 +251,8 @@ footer {
 }
 
 .ebook-mockup:hover {
-  transform: scale(1.05);
+  transform: scale(0.90);
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
+
 
